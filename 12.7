@@ -1,0 +1,12 @@
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0} #словарь
+money=int(input('Сумма вклада:')) # строка для ввода суммы депозита
+procent=list(per_cent.values()) #список значений
+#расчет доходов в банках за год
+tkb=round(money*procent[0])
+skb=round(money*procent[1])
+vtb=round(money*procent[2])
+sber=round(money*procent[3])
+deposit=[tkb,skb,vtb,sber] #список доходов
+print('Доход за год:',deposit) #годовый доход по депозитам
+max_result=(max(deposit)) #нахождение самого большого числа
+print('Максимальный доход:',max_result)
